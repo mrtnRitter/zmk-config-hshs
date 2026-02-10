@@ -31,7 +31,7 @@
 &kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
 &kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER
 &kp  LCTRL    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  ESC                                           &caps_word    &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  SQT
-                                                        &kp  LGUI     &kp  LALT     &sk  LSHIFT   &mo ADJ_L              &mo  ADJ_L    &kp  SPACE    &kp  LALT     &kp  RGUI
+                                                        &kp  LGUI     &kp  LALT     &sk  LSHIFT   &to ADJ_L              &to  ADJ_L    &kp  SPACE    &kp  LALT     &kp  RGUI
                         >;
                 };
 
@@ -39,13 +39,13 @@
                 adj_layer {
 /* ADJUST
  * -------------------------------------------------------------------------------------------------------------------------------------
- * |       | QWERTY| DVORAK| COLEMK|       |       |-----------------------------------|       |  F11  |  F12  |Prt Scr|EP_OFF | EP_ON |
+ * |       | QWERTY|       |       |       |       |-----------------------------------|       |  F11  |  F12  |Prt Scr|EP_OFF | EP_ON |
  * | RESET | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       | RESET |
- * |       | LGUI  | LALT  | LCTRL | LSHIFT|       |BT CLR |-------------------|       |       |       |OUT_USB|OUT_BLE|       | BOOTL |
+ * | BOOTL | LGUI  | LALT  | LCTRL | LSHIFT|       |BT CLR |-------------------|       |       |       |OUT_USB|OUT_BLE|       | BOOTL |
  *                                 |       |       |       |       |---|       |       |       |       |
  */
                         bindings = <
-&none         &to  QWERTY_L &trans        &trans        &none         &none                                                                             &none             &kp   F11          &kp   F12        &kp PRINTSCREEN   &ext_power EP_OFF  &ext_power EP_ON
+&none         &to  QWERTY_L &none         &none         &none         &none                                                                             &none             &kp   F11          &kp   F12        &kp PRINTSCREEN   &ext_power EP_OFF  &ext_power EP_ON
 &sys_reset    &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &none              &none            &none             &none              &sys_reset
 &bootloader   &kp  LGUI     &kp  LALT     &kp  LCTRL    &kp LSHIFT    &none         &bt BT_CLR                                         &none            &none             &none              &out  OUT_USB    &out  OUT_BLE     &none              &bootloader
                                                         &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans
