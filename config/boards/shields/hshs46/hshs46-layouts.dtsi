@@ -5,6 +5,9 @@
         compatible = "zmk,physical-layout";
         display-name = "HSHS46";
 
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
+
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0 (-1000)   850   300>
             , <&key_physical_attrs 100 100  100    0 (-1000)   850   300>
