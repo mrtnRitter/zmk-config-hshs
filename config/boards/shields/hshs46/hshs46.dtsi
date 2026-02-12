@@ -10,7 +10,7 @@
 / {
     chosen {
         zmk,kscan = &kscan;
-        zmk,matrix_transform = &default_transform;
+        //zmk,matrix_transform = &default_transform;
         zmk,physical-layout = &physical_layout0;
     };
 
@@ -34,6 +34,7 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "col2row";
+        wakeup-source; 
 
         row-gpios
             = <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
