@@ -32,9 +32,9 @@ default_layer {
 display-name = "Write";
 bindings = <
 
-&kp BSPC  &kp H     &kp DOT  &kp U            &kp COMMA        &kp DE_A_UMLAUT                                             &kp W  &kp B  &kp D  &kp M      &kp S  &kp DEL
-&none     &kp DE_Z  &kp A    &kp I            &kp E            &kp O                                                       &kp C  &kp N  &kp T  &kp R      &kp K  &none
-&none     &none     &kp X    &kp DE_O_UMLAUT  &kp DE_U_UMLAUT  &kp DE_Y  &to SET                                &to SET    &kp V  &kp F  &kp J  &kp DE_SZ  &none  &none
+&kp BSPC  &kp H     &kp DOT  &kp U            &kp COMMA        &kp DE_A_UMLAUT                                             &kp W  &kp B  &kp D  &kp M           &kp S  &kp DEL
+&none     &kp DE_Z  &kp A    &kp I            &kp E            &kp O                                                       &kp C  &kp N  &kp T  &kp R           &kp K  &none
+&none     &none     &kp X    &kp DE_O_UMLAUT  &kp DE_U_UMLAUT  &kp DE_Y  &to SET                                &to SET    &kp V  &kp F  &kp J  &kp DE_SHARP_S  &none  &none
                                               &kp G            &kp L     &none    &sk LSHIFT        &sk RSHIFT  &kp SPACE  &kp P  &kp Q
 >;};
 
