@@ -16,4 +16,7 @@ if SHIELD_HSHS46_LEFT || SHIELD_HSHS46_RIGHT
 config ZMK_SPLIT
     default y
 
+config ZMK_IDLE_SLEEP_TIMEOUT
+    default 900000
+
 endif
