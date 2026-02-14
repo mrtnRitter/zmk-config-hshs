@@ -9,50 +9,52 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <locale/keys_de.h>
 
-#define QWERTY_L 0
-#define ADJ_L    1
+#define WRT 0
+#define SET 1
 
 
 
 / {
 keymap {compatible = "zmk,keymap";
 
-/* QWERTY
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | `     |   Q   |   W   |   E   |   R   |   T   |-----------------------------------|   Y   |   U   |   I   |   O   |   P   | BKSPC |
- * | TAB   |   A   |   S   |   D   |   F   |   G   |-----------------------------------|   H   |   J   |   K   |   L   |   ;   | ENTER |
- * | CTRL  |   Z   |   X   |   C   |   V   |   B   |  ESC  |-------------------|  CAPS |   N   |   M   |   ,   |   .   |   /   |   '   |
- *                                 |  GUI  |  ALT  |SK SHFT|  Adj  |---|  Adj  | SPACE |  ALT  |  GUI  |
+/* WRT
+
+ *  BKS  H  .  U  ,  Ä                         W  B  D  M  S  DEL
+ *  ---  Z  A  I  E  O                         C  N  T  R  K  ---
+ *  --- --- X  Ö  Ü  Y  SET               SET  V  F  J  ß --- ---
+ *                G  L  MOD  SFT     SFT  SPC  P  Q
  */
+
 
 default_layer {
 display-name = "Write";
 bindings = <
 
-&kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
-&kp  TAB      &kp  A        &kp  S        &kp  D        &kp  F        &kp  G                                                                         &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER
-&kp  LCTRL    &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &kp  ESC                                           &caps_word    &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  SQT
-                                                        &kp  LGUI     &kp  LALT     &sk  LSHIFT   &to ADJ_L              &to  ADJ_L    &kp  SPACE    &kp  LALT     &kp  RGUI
+&kp BSPC  &kp  H  &kp DOT  &kp U  &kp COMMA  &kp DE_A_UMLAUT                                                                     &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
+&none     &kp  Z  &kp A    &kp I  &kp  F     &kp  G                                                                     &kp  H        &kp  J        &kp  K        &kp  L        &kp  SEMI     &kp  ENTER
+&none     &none   &kp X    &kp    &kp  V     &kp  B  &kp ESC                                       &caps_word    &kp  N        &kp  M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  SQT
+                                                     &kp LGUI  &kp LALT  &sk LSHIFT  &to SET              &to  SET    &kp  SPACE    &kp  LALT     &kp  RGUI
 >;};
 
 
-/* ADJUST
- * -------------------------------------------------------------------------------------------------------------------------------------
- * |  LCK  | QWERTY|       |       |       |       |-----------------------------------|       |  F11  |  F12  |Prt Scr|EP_OFF | EP_ON |
- * | RESET | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       | RESET |
- * | BOOTL | LGUI  | LALT  | LCTRL | LSHIFT|       |BT CLR |-------------------|       |       |       |OUT_USB|OUT_BLE|       | BOOTL |
- *                                 |       |       |       |       |---|       |       |       |       |
+/* SET
+
+ * LCK WRT --- --- --- ---                     --- --- --- --- --- ---
+ * RST BT0 BTC --- --- ---                     --- --- --- --- --- RST
+ * BTL --- --- --- --- --- ---             --- --- --- --- --- --- BTL
+ *                 --- --- --- ---     --- --- --- ---
  */
 
 adj_layer {
 display-name = "Settings";
 bindings = <
 
-&studio_unlock &to  QWERTY_L &none          &none         &none         &none                                                                             &none             &kp   F11          &kp   F12        &kp PRINTSCREEN   &ext_power EP_OFF  &ext_power EP_ON
-&sys_reset     &bt  BT_SEL 0 &bt  BT_SEL 1  &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &none              &none            &none             &none              &sys_reset
-&bootloader    &kp  LGUI     &kp  LALT      &kp  LCTRL    &kp LSHIFT    &none         &bt BT_CLR                                         &none            &none             &none              &out  OUT_USB    &out  OUT_BLE     &none              &bootloader
-                                                          &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans
+&studio_unlock &to WRT      &none      &none      &none      &none                                                        &none      &none      &none      &none      &none      &none
+&sys_reset     &bt BT_SEL 0 &bt BT_CLR &none      &none      &none                                                        &none      &none      &none      &none      &none      &sys_reset
+&bootloader    &none        &none      &none      &none      &none      &none                                  &none      &none      &none      &none      &none      &none      &bootloader
+                                                  &none      &none      &none      &none            &none      &none      &none      &none
 >;};
 
 extra1 {status = "reserved";};
