@@ -27,7 +27,7 @@ keymap {compatible = "zmk,keymap";
  */
 
 default_layer {
-display-name = "Write"        
+display-name = "Write";
 bindings = <
 
 &kp  GRAVE    &kp  Q        &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp  U        &kp  I        &kp  O        &kp  P        &kp  BSPC
@@ -46,7 +46,7 @@ bindings = <
  */
 
 adj_layer {
-display-name = "Settings"
+display-name = "Settings";
 bindings = <
 
 &studio_unlock &to  QWERTY_L &none          &none         &none         &none                                                                             &none             &kp   F11          &kp   F12        &kp PRINTSCREEN   &ext_power EP_OFF  &ext_power EP_ON
