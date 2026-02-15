@@ -18,8 +18,8 @@
 #define FNC 3
 #define SYS 4
 
-#define UML(uml) &kp DE_##uml_UMLAUT
 #define MO_TOG(layer) &mo_tog layer layer
+#define UML(uml) &kp DE_##uml_UMLAUT
 #define DE_LR(key) &mt DE_L##key DE_R##key
 
 
