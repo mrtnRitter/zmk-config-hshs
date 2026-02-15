@@ -19,7 +19,7 @@
 #define SYS 4
 
 #define MO_TOG(layer) &mo_tog layer layer
-#define UML(uml) &kp DE_##uml_UMLAUT
+#define UML(uml) &kp DE_##uml##_UMLAUT
 #define DE_LR(key) &mt DE_L##key DE_R##key
 
 
