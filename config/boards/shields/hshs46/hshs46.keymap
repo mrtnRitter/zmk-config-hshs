@@ -18,6 +18,7 @@
 #define FNC 3
 #define SYS 4
 
+#define UML(uml) &kp DE_##uml_UMLAUT
 #define MO_TOG(layer) &mo_tog layer layer
 #define DE_LR(key) &mt DE_L##key DE_R##key
 
@@ -37,10 +38,10 @@ write_layer {
 display-name = "Write";
 bindings = <
 
-&kp BSPC   &kp H     &kp DOT  &kp U            &kp COMMA        &kp DE_A_UMLAUT                                                       &kp W  &kp B  &kp D  &kp M           &kp S  &kp DEL
-&kp LALT   &kp DE_Z  &kp A    &kp I            &kp E            &kp O                                                                 &kp C  &kp N  &kp T  &kp R           &kp K  &kp F2
-&kp LCTRL  &kp TAB   &kp X    &kp DE_O_UMLAUT  &kp DE_U_UMLAUT  &kp DE_Y         &kp LWIN                                  &to SYS    &kp V  &kp F  &kp J  &kp DE_SHARP_S  &none  &kp RET
-                                               &kp G            &kp L            &mo SPL   &skq LSHIFT        &skq RSHIFT  &kp SPACE  &kp P  &kp Q
+&kp BSPC   &kp H     &kp DOT  &kp U   &kp COMMA  UML(A)                                                         &kp W  &kp B  &kp D  &kp M      &kp S  &kp DEL
+&kp LALT   &kp DE_Z  &kp A    &kp I   &kp E      &kp O                                                          &kp C  &kp N  &kp T  &kp R      &kp K  &kp F2
+&kp LCTRL  &kp TAB   &kp X    UML(O)  UML(U)     &kp DE_Y  &kp LWIN                                  &to SYS    &kp V  &kp F  &kp J  &kp DE_SZ  &none  &kp RET
+                                      &kp G      &kp L     &mo SPL   &skq LSHIFT        &skq RSHIFT  &kp SPACE  &kp P  &kp Q
 >;};
 
 
