@@ -56,7 +56,7 @@ special_layer {
 display-name = "Special";
 bindings = <
 
-&kp LC(BSPC)  &kp LC(A)  MO_TOG(FNC)  &kp UP      MO_TOG(NUM)  &kp PSCRN                                                &kp W  &kp B  &kp D  &kp M           &kp S  &kp DEL
+&kp LC(BSPC)  &kp LC(A)  &none        &kp UP      &none        &kp PSCRN                                                &kp W  &kp B  &kp D  &kp M           &kp S  &kp DEL
 &kp C_VOL_UP  &kp LC(C)  &kp LEFT     &kp DOWN    &kp RIGHT    &kp LC(V)                                                &kp C  &kp N  &kp T  &kp R           &kp K  &none
 &kp C_VOL_DN  &kp LC(X)  &kp DE_PIPE  &none       &none        &none       &kp ESC                           &to SET    &kp V  &kp F  &kp J  &kp DE_SHARP_S  &none  &none
                                                   &none        &none       &none    &none        &sk RSHIFT  &kp SPACE  &kp P  &kp Q
@@ -77,7 +77,7 @@ bindings = <
 
 &kp BSPC  &kp H     &kp DOT  &kp U            &kp COMMA        &kp DE_A_UMLAUT                                             &kp W  &kp B  &kp D  &kp M           &kp S  &kp DEL
 &none     &kp DE_Z  &kp A    &kp I            &kp E            &kp O                                                       &kp C  &kp N  &kp T  &kp R           &kp K  &none
-&none     &none     &kp X    &kp DE_O_UMLAUT  &kp DE_U_UMLAUT  &kp DE_Y  &to SET                                &to SET    &kp V  &kp F  &kp J  &kp DE_SHARP_S  &none  &none
+&none     &none     &kp X    &kp DE_O_UMLAUT  &kp DE_U_UMLAUT  &kp DE_Y  &to SET                                &to SYS    &kp V  &kp F  &kp J  &kp DE_SHARP_S  &none  &none
                                               &kp G            &kp L     &none    &sk LSHIFT        &sk RSHIFT  &kp SPACE  &kp P  &kp Q
 >;};
 
@@ -94,10 +94,10 @@ function_layer {
 display-name = "Function";
 bindings = <
 
-&kp BSPC  &kp H     &kp DOT  &kp U            &kp COMMA        &kp DE_A_UMLAUT                                             &kp W  &kp B  &kp D  &kp M           &kp S  &kp DEL
-&none     &kp DE_Z  &kp A    &kp I            &kp E            &kp O                                                       &kp C  &kp N  &kp T  &kp R           &kp K  &none
-&none     &none     &kp X    &kp DE_O_UMLAUT  &kp DE_U_UMLAUT  &kp DE_Y  &to SET                                &to SET    &kp V  &kp F  &kp J  &kp DE_SHARP_S  &none  &none
-                                              &kp G            &kp L     &none    &sk LSHIFT        &sk RSHIFT  &kp SPACE  &kp P  &kp Q
+&kp BSPC   &kp H     &kp DOT  &kp U            &kp COMMA        &kp DE_A_UMLAUT                                                       &kp W  &kp B  &kp D  &kp M           &kp S  &kp DEL
+&kp LALT   &kp DE_Z  &kp A    &kp I            &kp E            &kp O                                                                 &kp C  &kp N  &kp T  &kp R           &kp K  &kp F2
+&kp LCTRL  &kp TAB   &kp X    &kp DE_O_UMLAUT  &kp DE_U_UMLAUT  &kp DE_Y         &kp LWIN                                  &to SYS    &kp V  &kp F  &kp J  &kp DE_SHARP_S  &none  &kp RET
+                                               &kp G            &kp L            &mo SPL   &skq LSHIFT        &skq RSHIFT  &kp SPACE  &kp P  &kp Q
 >;};
 
 
