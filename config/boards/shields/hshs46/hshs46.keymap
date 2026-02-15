@@ -58,7 +58,7 @@ bindings = <
 
 &kp LC(BSPC)  &kp LC(A)  MO_TOG(FNC)  &kp UP      MO_TOG(NUM)  &kp PSCRN                                                &kp W  &kp B  &kp D  &kp M           &kp S  &kp DEL
 &kp C_VOL_UP  &kp LC(C)  &kp LEFT     &kp DOWN    &kp RIGHT    &kp LC(V)                                                &kp C  &kp N  &kp T  &kp R           &kp K  &none
-&kp C_VOL_DN  &kp LC(X)  &kp DE_PIPE  DE_LR(BRC)  DE_LR(PAR)   DE_LR(BKT)  &kp ESC                           &to SET    &kp V  &kp F  &kp J  &kp DE_SHARP_S  &none  &none
+&kp C_VOL_DN  &kp LC(X)  &kp DE_PIPE  &none       DE_LR(PAR)   DE_LR(BKT)  &kp ESC                           &to SET    &kp V  &kp F  &kp J  &kp DE_SHARP_S  &none  &none
                                                   &none        &none       &none    &none        &sk RSHIFT  &kp SPACE  &kp P  &kp Q
 >;};
 
