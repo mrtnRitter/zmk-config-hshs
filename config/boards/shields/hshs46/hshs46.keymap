@@ -53,17 +53,17 @@ bindings = <
  *  CBS CRA FNC CUP NUM PSC                       #   &   _  ' CTR SDL
  *  VUP CRC CLF CDN CRT CRV                       "   ?   !  -  ~   ^
  *  VDN CRX  |  { } ( ) [ ] ESC              AF4 ` ´ < >  €  $  §   °
- *                  --- --- --- ---     SFT  ATB  @   %
+ *                  --- --- --- ---     SFT  SPC  @   %
  */
 
 special_layer {
 display-name = "Special";
 bindings = <
 
-&kp LC(BSPC)  &kp LC(A)  MO_TOG(FNC)  &kp UP      MO_TOG(NUM)  &kp PSCRN                                                  &kp DE_HASH  &kp DE_AMPS   &kp DE_UNDER  &kp DE_SQT    &kp RCTRL     &kp RS(DEL)
-&kp C_VOL_UP  &kp LC(C)  &kp LEFT     &kp DOWN    &kp RIGHT    &kp LC(V)                                                  &kp DE_DQT   &kp DE_QMARK  &kp DE_EXCL   &kp DE_MINUS  &kp DE_TILDE  &kp DE_CARET
-&kp C_VOL_DN  &kp LC(X)  &kp DE_PIPE  DE_LR(BRC)  DE_LR(PAR)   DE_LR(BKT)  &kp ESC                           &kp LA(F4)   GR_AC        LT_GT         &kp DE_EURO   &kp DE_DLLR   &kp DE_SECT   &kp DE_DEG
-                                                  &none        &none       &none    &none        &kp RSHIFT  &kp LA(TAB)  &kp DE_AT    &kp DE_PRCNT
+&kp LC(BSPC)  &kp LC(A)  MO_TOG(FNC)  &kp UP      MO_TOG(NUM)  &kp PSCRN                                                 &kp DE_HASH  &kp DE_AMPS   &kp DE_UNDER  &kp DE_SQT    &kp RCTRL     &kp RS(DEL)
+&kp C_VOL_UP  &kp LC(C)  &kp LEFT     &kp DOWN    &kp RIGHT    &kp LC(V)                                                 &kp DE_DQT   &kp DE_QMARK  &kp DE_EXCL   &kp DE_MINUS  &kp DE_TILDE  &kp DE_CARET
+&kp C_VOL_DN  &kp LC(X)  &kp DE_PIPE  DE_LR(BRC)  DE_LR(PAR)   DE_LR(BKT)  &kp ESC                           &kp LA(F4)  GR_AC        LT_GT         &kp DE_EURO   &kp DE_DLLR   &kp DE_SECT   &kp DE_DEG
+                                                  &none        &none       &none    &none        &kp RSHIFT  &kp SPACE   &kp DE_AT    &kp DE_PRCNT
 >;};
 
 
