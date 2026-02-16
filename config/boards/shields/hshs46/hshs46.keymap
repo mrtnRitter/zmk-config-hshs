@@ -23,7 +23,7 @@
 #define UML(uml) &kp DE_##uml##_UMLAUT
 #define DE_LR(key) &mt DE_R##key DE_L##key
 #define GR_AC &mt DE_GRAVE DE_ACUTE
-#define LT_GT &mt DE_LT DE_GT
+#define LT_GT &mt DE_GT DE_LT
 
 
 / {
