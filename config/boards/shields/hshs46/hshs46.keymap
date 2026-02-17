@@ -32,8 +32,8 @@ keymap {compatible = "zmk,keymap";
 /* WRT
 
  *  BSP  H  .  U  ,  Ä                         W  B  D  M  S  DEL
- *  ALT  Z  A  I  E  O                         C  N  T  R  K  FN2
- *  CTR TAB X  Ö  Ü  Y  SYS               AF4  V  F  J  ß --- RET
+ *  ALT  Z  A  I  E  O                         C  N  T  R  K  ---
+ *  CTR TAB X  Ö  Ü  Y  ESC               SYS  V  F  J  ß --- RET
  *                G  L  SPL  SFT     SFT  SPC  P  Q
  */
 
@@ -41,10 +41,10 @@ write_layer {
 display-name = "Write";
 bindings = <
 
-&kp BSPC   &kp H     &kp DOT  &kp U   &kp COMMA  UML(A)                                                         &kp W  &kp B  &kp D  &kp M      &kp S  &kp DEL
-&kp LALT   &kp DE_Z  &kp A    &kp I   &kp E      &kp O                                                          &kp C  &kp N  &kp T  &kp R      &kp K  &kp F2
-&kp LCTRL  &kp TAB   &kp X    UML(O)  UML(U)     &kp DE_Y  &to SYS                                  &kp LA(F4)  &kp V  &kp F  &kp J  &kp DE_SZ  &none  &kp RET
-                                      &kp G      &kp L     &mo SPL  &skq LSHIFT        &skq RSHIFT  &kp SPACE   &kp P  &kp Q
+&kp BSPC   &kp H     &kp DOT  &kp U   &kp COMMA  UML(A)                                                        &kp W  &kp B  &kp D  &kp M      &kp S  &kp DEL
+&kp LALT   &kp DE_Z  &kp A    &kp I   &kp E      &kp O                                                         &kp C  &kp N  &kp T  &kp R      &kp K  &none
+&kp LCTRL  &kp TAB   &kp X    UML(O)  UML(U)     &kp DE_Y  &kp ESC                                  &to SYS    &kp V  &kp F  &kp J  &kp DE_SZ  &none  &kp RET
+                                      &kp G      &kp L     &mo SPL  &skq LSHIFT        &skq RSHIFT  &kp SPACE  &kp P  &kp Q
 >;};
 
 
@@ -52,7 +52,7 @@ bindings = <
 
  *  CBS CRA FNC CUP NUM PSC                       #   &   _  ' CTR SDL
  *  VUP CRC CLF CDN CRT CRV                       "   ?   !  -  ~   ^
- *  VDN CRX  |  { } ( ) [ ] ESC              WIN ` ´ < >  €  $  §   °
+ *  VDN CRX  |  { } ( ) [ ] FN2              WIN ` ´ < >  €  $  §   °
  *                  --- --- --- ---     SFT  SPC  @   %
  */
 
@@ -60,10 +60,10 @@ special_layer {
 display-name = "Special";
 bindings = <
 
-&kp LC(BSPC)  &kp LC(A)  MO_TOG(FNC)  &kp UP      MO_TOG(NUM)  &kp PSCRN                                               &kp DE_HASH  &kp DE_AMPS   &kp DE_UNDER  &kp DE_SQT    &kp RCTRL     &kp RS(DEL)
-&kp C_VOL_UP  &kp LC(C)  &kp LEFT     &kp DOWN    &kp RIGHT    &kp LC(V)                                               &kp DE_DQT   &kp DE_QMARK  &kp DE_EXCL   &kp DE_MINUS  &kp DE_TILDE  &kp DE_CARET
-&kp C_VOL_DN  &kp LC(X)  &kp DE_PIPE  DE_LR(BRC)  DE_LR(PAR)   DE_LR(BKT)  &kp ESC                           &kp LWIN  GR_AC        LT_GT         &kp DE_EURO   &kp DE_DLLR   &kp DE_SECT   &kp DE_DEG
-                                                  &none        &none       &none    &none        &kp RSHIFT  &kp SPACE &kp DE_AT    &kp DE_PRCNT
+&kp LC(BSPC)  &kp LC(A)  MO_TOG(FNC)  &kp UP      MO_TOG(NUM)  &kp PSCRN                                              &kp DE_HASH  &kp DE_AMPS   &kp DE_UNDER  &kp DE_SQT    &kp RCTRL     &kp RS(DEL)
+&kp C_VOL_UP  &kp LC(C)  &kp LEFT     &kp DOWN    &kp RIGHT    &kp LC(V)                                              &kp DE_DQT   &kp DE_QMARK  &kp DE_EXCL   &kp DE_MINUS  &kp DE_TILDE  &kp DE_CARET
+&kp C_VOL_DN  &kp LC(X)  &kp DE_PIPE  DE_LR(BRC)  DE_LR(PAR)   DE_LR(BKT)  &kp F2                           &kp LWIN  GR_AC        LT_GT         &kp DE_EURO   &kp DE_DLLR   &kp DE_SECT   &kp DE_DEG
+                                                  &none        &none       &none   &none        &kp RSHIFT  &kp SPACE &kp DE_AT    &kp DE_PRCNT
 >;};
 
 
