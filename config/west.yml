@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: zmk-locales
       url-base: https://github.com/joelspadin
+    - name: nice_view-c
+      url-base: https://github.com/mrtnRitter/nice-view-c
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -12,5 +14,8 @@ manifest:
     - name: zmk-locales
       remote: zmk-locales
       revision: main
+    - name: nice_view-c
+      remote: nice_view-c
+      revision: main  
   self:
     path: config
