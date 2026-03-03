@@ -4,7 +4,7 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: zmk-locales
       url-base: https://github.com/joelspadin
-    - name: mrtnRitter
+    - name: tiet
       url-base: https://github.com/mrtnRitter
   projects:
     - name: zmk
