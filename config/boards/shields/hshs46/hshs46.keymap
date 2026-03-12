@@ -31,7 +31,7 @@ keymap {compatible = "zmk,keymap";
 
 /* WRT
 
- *  ALT TAB   .  U  ,  Ä                       W  B  D  M --- ---
+ *  ALT TAB .  U  ,  Ä                         W  B  D  M HOM END
  *  BSP  H  A  I  E  O                         C  N  T  R  S  DEL
  *  CTR  Z  X  Ö  Ü  Y  WIN               SYS  V  F  J  ß  K  RET
  *                G  L  SPL  SFT     SFT  SPC  P  Q
@@ -41,9 +41,9 @@ write_layer {
 display-name = "Write";
 bindings = <
 
-&kp LALT   &kp TAB   &kp DOT  &kp U   &kp COMMA  UML(A)                                                         &kp W  &kp B  &kp D  &kp M      &none  &none
-&kp BSPC   &kp H     &kp A    &kp I   &kp E      &kp O                                                          &kp C  &kp N  &kp T  &kp R      &kp S  &kp DEL
-&kp LCTRL  &kp DE_Z  &kp X    UML(O)  UML(U)     &kp DE_Y  &kp LWIN                                  &to SYS    &kp V  &kp F  &kp J  &kp DE_SZ  &kp K  &kp RET
+&kp LALT   &kp TAB   &kp DOT  &kp U   &kp COMMA  UML(A)                                                         &kp W  &kp B  &kp D  &kp M      &kp HOME  &kp END
+&kp BSPC   &kp H     &kp A    &kp I   &kp E      &kp O                                                          &kp C  &kp N  &kp T  &kp R      &kp S     &kp DEL
+&kp LCTRL  &kp DE_Z  &kp X    UML(O)  UML(U)     &kp DE_Y  &kp LWIN                                  &to SYS    &kp V  &kp F  &kp J  &kp DE_SZ  &kp K     &kp RET
                                       &kp G      &kp L     &mo SPL   &skq LSHIFT        &skq RSHIFT  &kp SPACE  &kp P  &kp Q
 >;};
 
@@ -69,9 +69,9 @@ bindings = <
 
 /* NUM
 
- *  --- HOM --- CUP --- PUP                       =  7  8  9  -  ---
- *  BSP END CLF CDN CRT PDW                       +  4  5  6  /  DEL
- *  --- TAB --- --- --- --- WIN             ---   *  1  2  3 --- RET
+ *  --- TAB --- CUP --- ---                       =  7  8  9  -  ---
+ *  BSP PDW CLF CDN CRT ---                       +  4  5  6  /  DEL
+ *  --- PUP --- --- --- --- WIN             ---   *  1  2  3 --- RET
  *                  --- --- WRT ---      \   .    0  ,
  */
 
@@ -79,10 +79,10 @@ numbers_layer {
 display-name = "Numbers";
 bindings = <
 
-&none     &kp HOME  &none     &kp UP    &none      &kp PG_UP                                                    &kp DE_EQUAL     &kp N7      &kp N8  &kp N9  &kp KP_MINUS  &none
-&kp BSPC  &kp END   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN                                                    &kp KP_PLUS      &kp N4      &kp N5  &kp N6  &kp KP_SLASH  &kp DEL
-&none     &kp TAB   &none     &none     &none      &none      &kp LWIN                            &kp LEFT_WIN  &kp KP_ASTERISK  &kp N1      &kp N2  &kp N3  &none         &kp RET
-                                        &none      &none      &to WRT   &none        &kp DE_BSLH  &kp DOT       &kp KP_N0        &kp KP_DOT
+&none     &kp TAB    &none     &kp UP    &none      &none                                                    &kp DE_EQUAL     &kp N7      &kp N8  &kp N9  &kp KP_MINUS  &none
+&kp BSPC  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &none                                                    &kp KP_PLUS      &kp N4      &kp N5  &kp N6  &kp KP_SLASH  &kp DEL
+&none     &kp PG_UP  &none     &none     &none      &none  &kp LWIN                            &kp LEFT_WIN  &kp KP_ASTERISK  &kp N1      &kp N2  &kp N3  &none         &kp RET
+                                         &none      &none  &to WRT          &none        &kp DE_BSLH  &kp DOT       &kp KP_N0        &kp KP_DOT
 >;};
 
 /* FNC
