@@ -42,7 +42,7 @@ display-name = "Write";
 bindings = <
 
 &kp BSPC &kp H    &kp DOT  &kp U   &kp COMMA  UML(A)                                                         &kp W  &kp B  &kp D  &kp M      &kp S    &kp DEL
-&kp LAL   &kp DE_Z &kp A    &kp I   &kp E      &kp O                                                          &kp C  &kp N  &kp T  &kp R      &kp K    &kp HOME
+&kp LALT   &kp DE_Z &kp A    &kp I   &kp E      &kp O                                                          &kp C  &kp N  &kp T  &kp R      &kp K    &kp HOME
 &kp LCTRL &kp TAB  &kp X    UML(O)  UML(U)     &kp DE_Y  &kp LWIN                                  &to SYS    &kp V  &kp F  &kp J  &kp DE_SZ  &kp END  &kp RET
                                     &kp G      &kp L     &mo SPL   &skq LSHIFT        &skq RSHIFT  &kp SPACE  &kp P  &kp Q
 >;};
