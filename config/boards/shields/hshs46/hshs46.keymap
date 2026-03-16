@@ -32,8 +32,8 @@ keymap {compatible = "zmk,keymap";
 /* WRT
 
  *  BSP  H  .  U  ,  Ä                         W  B  D  M  S  DEL
- *  ALT  Z  A  I  E  O                         C  N  T  R  K  HOM
- *  CTR TAB X  Ö  Ü  Y  WIN               SYS  V  F  J  ß END RET
+ *  ALT  Z  A  I  E  O                         C  N  T  R  K  END
+ *  CTR TAB X  Ö  Ü  Y  WIN               SYS  V  F  J  ß HOM RET
  *                G  L  SPL  SFT     SFT  SPC  P  Q
  */
 
@@ -41,9 +41,9 @@ write_layer {
 display-name = "Write";
 bindings = <
 
-&kp BSPC &kp H    &kp DOT  &kp U   &kp COMMA  UML(A)                                                         &kp W  &kp B  &kp D  &kp M      &kp S    &kp DEL
-&kp LALT   &kp DE_Z &kp A    &kp I   &kp E      &kp O                                                          &kp C  &kp N  &kp T  &kp R      &kp K    &kp HOME
-&kp LCTRL &kp TAB  &kp X    UML(O)  UML(U)     &kp DE_Y  &kp LWIN                                  &to SYS    &kp V  &kp F  &kp J  &kp DE_SZ  &kp END  &kp RET
+&kp BSPC &kp H     &kp DOT  &kp U   &kp COMMA  UML(A)                                                         &kp W  &kp B  &kp D  &kp M      &kp S     &kp DEL
+&kp LALT &kp DE_Z  &kp A    &kp I   &kp E      &kp O                                                          &kp C  &kp N  &kp T  &kp R      &kp K     &kp END
+&kp LCTRL &kp TAB  &kp X    UML(O)  UML(U)     &kp DE_Y  &kp LWIN                                  &to SYS    &kp V  &kp F  &kp J  &kp DE_SZ  &kp HOME  &kp RET
                                     &kp G      &kp L     &mo SPL   &skq LSHIFT        &skq RSHIFT  &kp SPACE  &kp P  &kp Q
 >;};
 
