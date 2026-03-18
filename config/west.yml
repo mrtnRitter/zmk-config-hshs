@@ -6,9 +6,9 @@ manifest:
       url-base: https://github.com/joelspadin
     - name: nice-view-c
       url-base: https://github.com/mrtnRitter
-        - name: zzeneg # <-- Raw HID module
+    - name: zzeneg
       url-base: https://github.com/zzeneg
-    - name: srwi # <-- KeyPeek module
+    - name: srwi
       url-base: https://github.com/srwi
   projects:
     - name: zmk
