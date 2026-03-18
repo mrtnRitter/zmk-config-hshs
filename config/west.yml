@@ -6,6 +6,10 @@ manifest:
       url-base: https://github.com/joelspadin
     - name: nice-view-c
       url-base: https://github.com/mrtnRitter
+        - name: zzeneg # <-- Raw HID module
+      url-base: https://github.com/zzeneg
+    - name: srwi # <-- KeyPeek module
+      url-base: https://github.com/srwi
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -16,6 +20,12 @@ manifest:
       revision: main
     - name: nice-view-c
       remote: nice-view-c
+      revision: main
+    - name: zmk-raw-hid
+      remote: zzeneg
+      revision: main
+    - name: zmk-keypeek-layer-notifier
+      remote: srwi
       revision: main
   self:
     path: config
