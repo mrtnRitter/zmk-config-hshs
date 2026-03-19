@@ -109,7 +109,7 @@ bindings = <
 
  * BTL --- BUT EPT --- BNX                     --- --- --- --- --- BTL
  * --- --- --- --- RST BPV                     --- RST --- --- --- ---
- * --- --- --- --- --- BCL ---             --- --- --- --- --- --- ---
+ * ULK --- --- --- --- BCL ---             --- --- --- --- --- --- ---
  *                 --- --- WRT ---     --- --- --- ---
  */
 
@@ -117,10 +117,10 @@ system_layer {
 display-name = "System";
 bindings = <
 
-&bootloader  &none  &out OUT_TOG  &ext_power EP_TOG  &none       &bt BT_NXT                                          &none  &none       &none  &none  &none  &bootloader
-&none        &none  &none         &none              &sys_reset  &bt BT_PRV                                          &none  &sys_reset  &none  &none  &none  &none
-&none        &none  &none         &none              &none       &bt BT_CLR  &none                            &none  &none  &none       &none  &none  &none  &none
-                                                     &none       &none       &to WRT  &none            &none  &none  &none  &none
+&bootloader     &none  &out OUT_TOG  &ext_power EP_TOG  &none       &bt BT_NXT                                          &none  &none       &none  &none  &none  &bootloader
+&none           &none  &none         &none              &sys_reset  &bt BT_PRV                                          &none  &sys_reset  &none  &none  &none  &none
+&studio_unlock  &none  &none         &none              &none       &bt BT_CLR  &none                            &none  &none  &none       &none  &none  &none  &none
+                                                        &none       &none       &to WRT  &none            &none  &none  &none  &none
 >;};
 
 };
