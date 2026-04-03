@@ -24,6 +24,7 @@
 #define DE_LR(key) &mt DE_R##key DE_L##key
 #define GR_AC &mt DE_GRAVE DE_ACUTE
 #define LT_GT &mt DE_GT DE_LT
+#define TO(layer) &lpls 0 layer
 
 
 / {
@@ -43,7 +44,7 @@ bindings = <
 
 &kp BSPC &kp H     &kp DOT  &kp U   &kp COMMA  UML(A)                                                         &kp W  &kp B  &kp D  &kp M      &kp S     &kp DEL
 &kp LALT &kp DE_Z  &kp A    &kp I   &kp E      &kp O                                                          &kp C  &kp N  &kp T  &kp R      &kp K     &kp END
-&kp LCTRL &kp TAB  &kp X    UML(O)  UML(U)     &kp DE_Y  &kp LWIN                                  &to SYS    &kp V  &kp F  &kp J  &kp DE_SZ  &kp HOME  &kp RET
+&kp LCTRL &kp TAB  &kp X    UML(O)  UML(U)     &kp DE_Y  &kp LWIN                                  TO(SYS)    &kp V  &kp F  &kp J  &kp DE_SZ  &kp HOME  &kp RET
                                     &kp G      &kp L     &mo SPL   &skq LSHIFT        &skq RSHIFT  &kp SPACE  &kp P  &kp Q
 >;};
 
@@ -149,6 +150,14 @@ behaviors {
             flavor = "hold-preferred";
             tapping-term-ms = <160>;
             bindings = <&kp>, <&kp>;
+        };
+
+        lpls: long_press_layer_switch {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <160>;
+            bindings = <&none>, <&to>;
         };
     };
 };
