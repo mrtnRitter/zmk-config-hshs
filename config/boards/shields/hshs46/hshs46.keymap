@@ -24,7 +24,7 @@
 #define DE_LR(key) &mt DE_R##key DE_L##key
 #define GR_AC &mt DE_GRAVE DE_ACUTE
 #define LT_GT &mt DE_GT DE_LT
-#define TO(layer) &lpls 0 layer
+#define TO(layer) &lpls layer 0
 
 
 / {
@@ -157,7 +157,7 @@ behaviors {
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <1000>;
-            bindings = <&none>, <&to>;
+            bindings = <&to>, <&none>;
         };
     };
 };
