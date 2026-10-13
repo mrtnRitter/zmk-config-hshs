@@ -92,7 +92,7 @@ bindings = <
  *  --- MSL MCL MUP MCR MSU                     F10 FN7 FN8 FN9 --- ---
  *  --- MSR MLF MDN MRT MSD                     F11 FN4 FN5 FN6 --- ---
  *  --- --- --- --- --- MMC ---             --- F12 FN1 FN2 FN3 --- ---
- *                  --- --- WRT ---     SFT CTR ALT ---
+ *                  --- --- WRT ---     SFT ALT CTR ---
  */
 
 
@@ -103,7 +103,7 @@ bindings = <
 &none  &msc SCRL_LEFT   &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP                                                 &kp F10   &kp F7  &kp F8  &kp F9  &none  &none
 &none  &msc SCRL_RIGHT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN                                               &kp F11   &kp F4  &kp F5  &kp F6  &none  &none
 &none  &none            &none           &none           &none            &mkp MCLK       &none                             &none      &kp F12   &kp F1  &kp F2  &kp F3  &none  &none
-                                                        &none            &none           &to WRT  &none        &kp RSHIFT  &kp LCTRL  &kp LALT  &none
+                                                        &none            &none           &to WRT  &none        &kp RSHIFT  &kp LALTL  &kp LCTRL  &none
 >;};
 
 
