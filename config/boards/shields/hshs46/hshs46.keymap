@@ -25,7 +25,7 @@
 #define GR_AC &mt DE_GRAVE DE_ACUTE
 #define LT_GT &mt DE_GT DE_LT
 #define TO(layer) &lpls layer 0
-#define .F2 &mt F2 DOT
+#define DOT_F2 &lpkp F2 DOT
 
 
 / {
@@ -43,7 +43,7 @@ write_layer {
 display-name = "Write";
 bindings = <
 
-&kp BSPC &kp H     &kp .F2  &kp U   &kp COMMA  UML(A)                                                         &kp W  &kp B  &kp D  &kp M      &kp S     &kp DEL
+&kp BSPC &kp H     DOT_F2   &kp U   &kp COMMA  UML(A)                                                         &kp W  &kp B  &kp D  &kp M      &kp S     &kp DEL
 &kp LALT &kp DE_Z  &kp A    &kp I   &kp E      &kp O                                                          &kp C  &kp N  &kp T  &kp R      &kp K     &kp END
 &kp LCTRL &kp TAB  &kp X    UML(O)  UML(U)     &kp DE_Y  &kp LWIN                                  TO(SYS)    &kp V  &kp F  &kp J  &kp DE_SZ  &kp HOME  &kp RET
                                     &kp G      &kp L     &mo SPL   &skq LSHIFT        &skq RSHIFT  &kp SPACE  &kp P  &kp Q
